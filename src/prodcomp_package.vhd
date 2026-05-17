@@ -1,0 +1,13 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+
+PACKAGE prodcomp_package IS 
+	COMPONENT Prod_comp 
+		PORT( A : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
+				B : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
+				C : OUT STD_LOGIC;
+				M1 : OUT STD_LOGIC_VECTOR(0 TO 6);
+				M2 : OUT STD_LOGIC_VECTOR(0 TO 6);
+				M3 : OUT STD_LOGIC_VECTOR(0 TO 6));
+	END COMPONENT;
+END prodcomp_package;

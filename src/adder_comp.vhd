@@ -1,0 +1,56 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+USE work.fulladd_package_vector.all;
+
+ENTITY adder_comp IS 
+	PORT( Cin : IN STD_LOGIC;
+			A : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+			B : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+			Cout : OUT STD_LOGIC;
+			M1 : OUT STD_LOGIC_VECTOR(0 TO 6);
+			M2 : OUT STD_LOGIC_VECTOR(0 TO 6);
+			M3 : OUT STD_LOGIC_VECTOR(0 TO 6));
+END adder_comp;
+
+ARCHITECTURE Func OF adder_comp IS
+	SIGNAL Soma : STD_LOGIC_VECTOR(3 DOWNTO 0);
+	SIGNAL Cs : STD_LOGIC;
+BEGIN
+	
+	stage0: adder4 PORT MAP (Cin,A,B,Soma,Cout=>Cs);
+	
+	WITH A SELECT
+		M1 <= 	"0000001" WHEN "0000",
+					"1001111" WHEN "0001",
+					"0010010" WHEN "0010",
+					"0000110" WHEN "0011",
+					"1001100" WHEN "0100",
+					"0100100" WHEN "0101",
+					"0100000" WHEN "0110",
+					"0001111" WHEN "0111",
+					"0000000" WHEN OTHERS;
+					
+	WITH B SELECT
+		M2  <=   "0000001" WHEN "0000",
+					"1001111" WHEN "0001",
+					"0010010" WHEN "0010",
+					"0000110" WHEN "0011",
+					"1001100" WHEN "0100",
+					"0100100" WHEN "0101",
+					"0100000" WHEN "0110",
+					"0001111" WHEN "0111",
+					"0000000" WHEN OTHERS;
+	
+	WITH Soma SELECT 
+		M3  <=   "0000001" WHEN "0000",
+					"1001111" WHEN "0001",
+					"0010010" WHEN "0010",
+					"0000110" WHEN "0011",
+					"1001100" WHEN "0100",
+					"0100100" WHEN "0101",
+					"0100000" WHEN "0110",
+					"0001111" WHEN "0111",
+					"0000000" WHEN OTHERS;
+	
+END Func;
+	

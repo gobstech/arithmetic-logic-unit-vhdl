@@ -1,0 +1,45 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+USE work.prod_package.all;
+
+ENTITY prod_comp IS
+	PORT( A : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
+			B : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
+			C : OUT STD_LOGIC;
+			M1 : OUT STD_LOGIC_VECTOR(0 TO 6);
+			M2 : OUT STD_LOGIC_VECTOR(0 TO 6);
+			M3 : OUT STD_LOGIC_VECTOR(0 TO 6));
+END prod_comp;
+
+ARCHITECTURE Prodsum OF prod_comp IS
+	SIGNAL Sum : STD_LOGIC_VECTOR(3 DOWNTO 0);
+BEGIN
+	Sum0: prod PORT MAP (A,B,Sum,C);
+	
+	WITH A SELECT
+		M1 <= 	"0000001" WHEN "00",
+					"1001111" WHEN "01",
+					"0010010" WHEN "10",
+					"0000110" WHEN "11",
+					"0000000" WHEN OTHERS;
+					
+	WITH B SELECT
+		M2  <=   "0000001" WHEN "00",
+					"1001111" WHEN "01",
+					"0010010" WHEN "10",
+					"0000110" WHEN "11",
+					"0000000" WHEN OTHERS;
+	
+	WITH Sum SELECT 
+		M3  <=   "0000001" WHEN "0000",
+					"1001111" WHEN "0001",
+					"0010010" WHEN "0010",
+					"0000110" WHEN "0011",
+					"1001100" WHEN "0100",
+					"0100100" WHEN "0101",
+					"0100000" WHEN "0110",
+					"0001111" WHEN "0111",
+					"0000000" WHEN OTHERS;
+END Prodsum;
+	
+			
