@@ -39,7 +39,15 @@ BEGIN
 					"0100100" WHEN "0101", -- Mostra '5'
 					"0100000" WHEN "0110", -- Mostra '6'
 					"0001111" WHEN "0111", -- Mostra '7'
-					"0000000" WHEN OTHERS;
+					"0000000" WHEN "1000", -- Mostra '8'
+					"0000100" WHEN "1001", -- Mostra '9'
+					"0001000" WHEN "1010", -- Mostra 'A'
+					"1100000" WHEN "1011", -- Mostra 'b'
+					"0110001" WHEN "1100", -- Mostra 'C'
+					"1000010" WHEN "1101", -- Mostra 'd'
+					"0110000" WHEN "1110", -- Mostra 'E'
+					"0111000" WHEN "1111", -- Mostra 'F'
+					"1111111" WHEN OTHERS;
 					
 	-- Decodificador de 7 segmentos para a entrada B
 	WITH B SELECT

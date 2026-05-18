@@ -22,7 +22,8 @@ BEGIN
 	Sum(0) <= Product(0);
 	
 	operation0: fulladd PORT MAP ('0',Product(1),Product(2),Sum(1),Coutaux);
-	operation1: fulladd PORT MAP (Coutaux,Product(3),Product(2),Sum(2),Cout_1);
+	-- Correção: Remove Product(2) redundante. Soma apenas o carry anterior com o bit MSB do produto.
+	operation1: fulladd PORT MAP (Coutaux,Product(3),'0',Sum(2),Cout_1);
 	
 	Cout <= Cout_1;
 	Sum(3) <= Cout_1;
