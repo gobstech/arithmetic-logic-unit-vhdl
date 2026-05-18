@@ -16,19 +16,24 @@ ARCHITECTURE Comp_Work OF Comp IS
 	SIGNAL G_aux : STD_LOGIC;
 	
 BEGIN
-	I(0) <= x(0) XNOR y(0);
-	I(1) <= x(1) XNOR y(1);
-	I(2) <= x(2) XNOR y(2);
-	I(3) <= x(3) XNOR y(3);
+	-- Comparação de igualdade bit a bit usando NOT XOR (equivalente ao XNOR)
+	-- Isso garante maior compatibilidade e clareza na detecção de bits iguais.
+	I(0) <= NOT (x(0) XOR y(0));
+	I(1) <= NOT (x(1) XOR y(1));
+	I(2) <= NOT (x(2) XOR y(2));
+	I(3) <= NOT (x(3) XOR y(3));
 	
-	J(0) <= x(0) AND (NOT y(0)) AND I(1) AND I(2) AND I(3);
-	J(1) <= x(1) AND (NOT y(1)) AND I(2) AND I(3);
-	J(2) <= x(2) AND (NOT y(2)) AND I(3);
-	J(3) <= x(3) AND (NOT y(3));
+	-- Lógica para "Maior Que" (G): x é maior que y se o bit significativo de x for 1 e o de y for 0,
+	-- ou se os bits mais significativos forem iguais e o próximo bit seguir a mesma regra.
+	J(3) <= x(3) AND (NOT y(3));                        -- Bit 3 (MSB) é determinante
+	J(2) <= x(2) AND (NOT y(2)) AND I(3);               -- Bit 2 decide se Bit 3 é igual
+	J(1) <= x(1) AND (NOT y(1)) AND I(2) AND I(3);      -- Bit 1 decide se Bits 3 e 2 são iguais
+	J(0) <= x(0) AND (NOT y(0)) AND I(1) AND I(2) AND I(3); -- LSB decide se todos os outros são iguais
 
-	E_aux <= I(0) AND I(1) AND I(2) AND I(3);
-	G_aux <= J(0) OR J(1) OR J(2) OR J(3);
-	L <= E_aux NOR G_aux;
+	-- Atribuição dos sinais auxiliares
+	E_aux <= I(3) AND I(2) AND I(1) AND I(0);
+	G_aux <= J(3) OR J(2) OR J(1) OR J(0);
+	L <= NOT (E_aux OR G_aux); -- Garante que L é 1 apenas se E e G forem 0
 	E <= E_aux;
 	G <= G_aux;
 END Comp_Work;
