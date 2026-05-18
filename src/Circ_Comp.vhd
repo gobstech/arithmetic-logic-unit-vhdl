@@ -44,27 +44,31 @@ ARCHITECTURE Final OF Circ_Comp IS
 	SIGNAL Operation1 : STD_LOGIC_VECTOR(3 DOWNTO 0);
 	SIGNAL Operation2 : STD_LOGIC_VECTOR(3 DOWNTO 0);
 	SIGNAL Operation3 : STD_LOGIC_VECTOR(3 DOWNTO 0);
+	SIGNAL B_not      : STD_LOGIC_VECTOR(3 DOWNTO 0);
 	SIGNAL HEX6_aux1 : STD_LOGIC_VECTOR(0 TO 6);
 	SIGNAL HEX6_aux2 : STD_LOGIC_VECTOR(0 TO 6);
 	SIGNAL HEX6_aux3 : STD_LOGIC_VECTOR(0 TO 6);
-	SIGNAL Flag_Vector1 : STD_LOGIC_VECTOR(2 DOWNTO 0);
-	SIGNAL Flag_Vector2 : STD_LOGIC_VECTOR(2 DOWNTO 0);
-	SIGNAL Flag_Vector3 : STD_LOGIC_VECTOR(2 DOWNTO 0);
-	SIGNAL Operation1_aux : STD_LOGIC_VECTOR(
+	SIGNAL Flag_Vector : STD_LOGIC_VECTOR(2 DOWNTO 0);
+	--SIGNAL Operation1_aux : STD_LOGIC_VECTOR(
 	SIGNAL Zero : STD_LOGIC;
 BEGIN
 	A <= SW(10 DOWNTO 7);
 	B <= SW(6 DOWNTO 3);
+	B_not <= NOT B;
 	C <= SW(8 DOWNTO 7);
 	D <= SW(4 DOWNTO 3);
 	Opcode <= SW(2 DOWNTO 0);
+	
+	Cin <= '0';  -- Soma normal
+	Cin2 <= '1'; -- Complemento de 2 para subtração
 	
 	Operation1 <= A AND B;
 	Operation2 <= A OR B;
 	Operation3 <= NOT B;
 	
 	Operation4: adder_comp PORT MAP (Cin,A,B,C1,HEX2_SOMA,HEX4_SOMA,Res1);
-	Operation5: adder_comp PORT MAP (Cin2,A,B,C2,HEX2_SUB,HEX4_SUB,Res2);
+	-- Subtração: A + (NOT B) + 1
+	Operation5: adder_comp PORT MAP (Cin2,A,B_not,C2,HEX2_SUB,HEX4_SUB,Res2);
 	Operation6: Prod_Comp PORT MAP (C,D,C3,HEX2_PROD,HEX4_PROD,Res3);
 	Operation7: Comparator_Operations PORT MAP (A,B,Equ,Grt,Lst,HEX2_COMP,HEX4_COMP);
 	
@@ -82,7 +86,8 @@ BEGIN
 				 '0' WHEN OTHERS;
 	
 	WITH Opcode SELECT 
-	  Zero <= Res_g1 WHEN "101"
+	  Zero <= '1' WHEN "000", -- Exemplo: define lógica para flag Zero
+	          '0' WHEN OTHERS;
 	
 	Flag_Vector <= Overflow&Zero&Cout;
 	
@@ -126,15 +131,15 @@ BEGIN
 				  HEX6_aux2 WHEN "010",
 				  HEX6_aux3 WHEN "011",
 				  Res1 WHEN "100",
-				  Res2 WHEN "110",
-		        Res3 WHEN "111",
+				  Res2 WHEN "101", -- Alinhado com Opcode de Subtração
+		        Res3 WHEN "110",
 			"0000000" WHEN OTHERS;
 			
 	WITH Opcode SELECT 
 		LEDR(5 DOWNTO 3) <= Operator_Vector WHEN "111",
-		                    "000"WHEN OTHERS; 	
-								  
+		                    "000"WHEN OTHERS; 
+
 	WITH Opcode SELECT
-	   LEDR(2 DOWNTO 0) <= "000" WHEN "000",
-							     Flag_Vector WHEN OTHERS;
+		LEDR(2 DOWNTO 0) <= Flag_Vector WHEN "100" | "101" | "110",
+                        "000" WHEN OTHERS;
 END Final;	
