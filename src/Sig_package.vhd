@@ -1,0 +1,11 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+
+PACKAGE Sig_package IS 
+	COMPONENT Sig
+		PORT(	Res : IN STD_LOGIC_VECTOR(2 DOWNTO 0);
+			Placa1 : OUT STD_LOGIC_VECTOR(0 TO 6);
+			Placa2 : OUT STD_LOGIC_VECTOR(0 TO 6);
+			Placa3 : OUT STD_LOGIC_VECTOR(0 TO 6));
+	END COMPONENT;
+END Sig_package;

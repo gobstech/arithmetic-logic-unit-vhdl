@@ -1,0 +1,39 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+
+ENTITY Sig IS 
+	PORT(	Res : IN STD_LOGIC_VECTOR(2 DOWNTO 0);
+			Placa1 : OUT STD_LOGIC_VECTOR(0 TO 6);
+			Placa2 : OUT STD_LOGIC_VECTOR(0 TO 6);
+			Placa3 : OUT STD_LOGIC_VECTOR(0 TO 6));
+END Sig;
+
+ARCHITECTURE A OF Sig IS 
+	SIGNAL x : STD_LOGIC_VECTOR(2 DOWNTO 0);
+	SIGNAL Res1 : STD_LOGIC_VECTOR(2 DOWNTO 0);
+BEGIN
+	Res1 <= Res;
+
+	WITH Res1 SELECT 
+		x <= "111" WHEN "111",
+			  "110" WHEN "110",
+			  "101" WHEN "101",
+			  "100" WHEN "100",
+			  "011" WHEN "011",
+			  "010" WHEN "010",
+			  "001" WHEN "001",
+		     "000" WHEN OTHERS;
+	
+	WITH x(2) SELECT
+	   Placa1 <= "1111110" WHEN '1',
+					 "1111111" WHEN OTHERS;
+					 
+	WITH x(1) SELECT
+	   Placa2 <= "1111110" WHEN '1',
+					 "1111111" WHEN OTHERS;
+	
+	WITH x(0) SELECT
+	   Placa3 <= "1111110" WHEN '1',
+					 "1111111" WHEN OTHERS;
+END A;
+	
