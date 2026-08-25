@@ -1,0 +1,317 @@
+# Reading C:/intelFPGA_lite/17.1/modelsim_ase/tcl/vsim/pref.tcl
+# do Circ_Comp_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/17.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {C:/QP/Circ_Comp/Comparator_package.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:16:19 on May 18,2026
+# vcom -reportprogress 300 -93 -work work C:/QP/Circ_Comp/Comparator_package.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling package Comparator_package
+# End time: 21:16:19 on May 18,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/QP/Circ_Comp/Comp.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:16:19 on May 18,2026
+# vcom -reportprogress 300 -93 -work work C:/QP/Circ_Comp/Comp.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity Comp
+# -- Compiling architecture Comp_Work of Comp
+# End time: 21:16:19 on May 18,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/QP/Circ_Comp/prodcomp_package.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:16:19 on May 18,2026
+# vcom -reportprogress 300 -93 -work work C:/QP/Circ_Comp/prodcomp_package.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling package prodcomp_package
+# End time: 21:16:19 on May 18,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/QP/Circ_Comp/prod_package.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:16:19 on May 18,2026
+# vcom -reportprogress 300 -93 -work work C:/QP/Circ_Comp/prod_package.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling package prod_package
+# End time: 21:16:20 on May 18,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/QP/Circ_Comp/fulladd_package_vector.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:16:20 on May 18,2026
+# vcom -reportprogress 300 -93 -work work C:/QP/Circ_Comp/fulladd_package_vector.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling package fulladd_package_vector
+# End time: 21:16:20 on May 18,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/QP/Circ_Comp/fulladd_package.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:16:20 on May 18,2026
+# vcom -reportprogress 300 -93 -work work C:/QP/Circ_Comp/fulladd_package.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling package fulladd_package
+# End time: 21:16:20 on May 18,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/QP/Circ_Comp/fulladd.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:16:20 on May 18,2026
+# vcom -reportprogress 300 -93 -work work C:/QP/Circ_Comp/fulladd.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity fulladd
+# -- Compiling architecture Logic of fulladd
+# End time: 21:16:20 on May 18,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/QP/Circ_Comp/compadder_package.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:16:20 on May 18,2026
+# vcom -reportprogress 300 -93 -work work C:/QP/Circ_Comp/compadder_package.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling package compadder_package
+# End time: 21:16:20 on May 18,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/QP/Circ_Comp/Comparator_Signals.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:16:20 on May 18,2026
+# vcom -reportprogress 300 -93 -work work C:/QP/Circ_Comp/Comparator_Signals.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling package Comparator_Signals
+# End time: 21:16:20 on May 18,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/QP/Circ_Comp/Sig.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:16:20 on May 18,2026
+# vcom -reportprogress 300 -93 -work work C:/QP/Circ_Comp/Sig.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity Sig
+# -- Compiling architecture A of Sig
+# End time: 21:16:20 on May 18,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/QP/Circ_Comp/Sig_package.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:16:20 on May 18,2026
+# vcom -reportprogress 300 -93 -work work C:/QP/Circ_Comp/Sig_package.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling package Sig_package
+# End time: 21:16:20 on May 18,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/QP/Circ_Comp/Ver.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:16:20 on May 18,2026
+# vcom -reportprogress 300 -93 -work work C:/QP/Circ_Comp/Ver.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity Ver
+# -- Compiling architecture Verification of Ver
+# End time: 21:16:21 on May 18,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/QP/Circ_Comp/Ver_package.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:16:21 on May 18,2026
+# vcom -reportprogress 300 -93 -work work C:/QP/Circ_Comp/Ver_package.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling package Ver_package
+# End time: 21:16:21 on May 18,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/QP/Circ_Comp/Comparator_Operations.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:16:21 on May 18,2026
+# vcom -reportprogress 300 -93 -work work C:/QP/Circ_Comp/Comparator_Operations.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package Comparator_package
+# -- Compiling entity Comparator_Operations
+# -- Compiling architecture Operations of Comparator_Operations
+# End time: 21:16:21 on May 18,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/QP/Circ_Comp/prod_comp.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:16:21 on May 18,2026
+# vcom -reportprogress 300 -93 -work work C:/QP/Circ_Comp/prod_comp.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package prod_package
+# -- Compiling entity prod_comp
+# -- Compiling architecture Prodsum of prod_comp
+# End time: 21:16:21 on May 18,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/QP/Circ_Comp/Prod.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:16:21 on May 18,2026
+# vcom -reportprogress 300 -93 -work work C:/QP/Circ_Comp/Prod.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package fulladd_package
+# -- Compiling entity Prod
+# -- Compiling architecture Pon of Prod
+# End time: 21:16:21 on May 18,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/QP/Circ_Comp/adder4.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:16:21 on May 18,2026
+# vcom -reportprogress 300 -93 -work work C:/QP/Circ_Comp/adder4.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package fulladd_package
+# -- Compiling entity adder4
+# -- Compiling architecture Struc of adder4
+# End time: 21:16:21 on May 18,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/QP/Circ_Comp/adder_comp.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:16:21 on May 18,2026
+# vcom -reportprogress 300 -93 -work work C:/QP/Circ_Comp/adder_comp.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package fulladd_package_vector
+# -- Compiling entity adder_comp
+# -- Compiling architecture Func of adder_comp
+# End time: 21:16:21 on May 18,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/QP/Circ_Comp/Circ_Comp.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:16:21 on May 18,2026
+# vcom -reportprogress 300 -93 -work work C:/QP/Circ_Comp/Circ_Comp.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package compadder_package
+# -- Loading package prodcomp_package
+# -- Loading package Comparator_Signals
+# -- Loading package Sig_package
+# -- Loading package Ver_package
+# -- Compiling entity Circ_Comp
+# -- Compiling architecture Final of Circ_Comp
+# End time: 21:16:22 on May 18,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# 
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+wave create -pattern none -portmode in -language vhdl -range 10 0 /circ_comp/SW
+# Editable Wave items are not compatible with the wave window's standard undo-redo.  Standard undo-redo has been disabled.
+# circ_comp
+wave create -pattern none -portmode out -language vhdl -range 0 6 /circ_comp/HEX7
+# circ_comp
+wave create -pattern none -portmode out -language vhdl -range 0 6 /circ_comp/HEX6
+# circ_comp
+wave create -pattern none -portmode out -language vhdl -range 0 6 /circ_comp/HEX5
+# circ_comp
+wave create -pattern none -portmode out -language vhdl -range 0 6 /circ_comp/HEX4
+# circ_comp
+wave create -pattern none -portmode out -language vhdl -range 0 6 /circ_comp/HEX3
+# circ_comp
+wave create -pattern none -portmode out -language vhdl -range 0 6 /circ_comp/HEX2
+# circ_comp
+wave create -pattern none -portmode out -language vhdl -range 0 6 /circ_comp/HEX0
+# circ_comp
+wave create -pattern none -portmode out -language vhdl -range 5 0 /circ_comp/LEDR
+# circ_comp
+vsim work.circ_comp(final)
+# vsim work.circ_comp(final) 
+# Start time: 21:17:53 on May 18,2026
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.compadder_package
+# Loading work.prodcomp_package
+# Loading work.comparator_signals
+# Loading work.sig_package
+# Loading work.ver_package
+# Loading work.circ_comp(final)
+# Loading work.fulladd_package_vector
+# Loading work.adder_comp(func)
+# Loading work.fulladd_package
+# Loading work.adder4(struc)
+# Loading work.fulladd(logic)
+# Loading work.prod_package
+# Loading work.prod_comp(prodsum)
+# Loading work.prod(pon)
+# Loading work.comparator_package
+# Loading work.comparator_operations(operations)
+# Loading work.comp(comp_work)
+# Loading work.sig(a)
+# Loading work.ver(verification)
+wave create -driver freeze -pattern counter -startvalue 00000000000 -endvalue 11111111111 -type Range -direction Up -period 25ps -step 1 -repeat 2048 -range 10 0 -starttime 0ps -endtime 5000ps sim:/circ_comp/SW
+# Editable Wave items are not compatible with the wave window's standard undo-redo.  Standard undo-redo has been disabled.
+# circ_comp
+wave create -driver freeze -pattern counter -startvalue 00000000000 -endvalue 11111111111 -type Range -direction Up -period 15ps -step 1 -repeat forever -range 10 0 -starttime 0ps -endtime 2500ps sim:/circ_comp/SW
+# Editable Wave items are not compatible with the wave window's standard undo-redo.  Standard undo-redo has been disabled.
+# circ_comp
+wave create -driver freeze -pattern counter -startvalue 00000000000 -endvalue 11111111111 -type Range -direction Up -period 20ps -step 1 -repeat 2048 -range 10 0 -starttime 0ps -endtime 10000ps sim:/circ_comp/SW
+# Editable Wave items are not compatible with the wave window's standard undo-redo.  Standard undo-redo has been disabled.
+# circ_comp
+wave create -driver freeze -pattern counter -startvalue 00000000000 -endvalue 11111111111 -type Range -direction Up -period 20ps -step 1 -repeat 2048 -range 10 0 -starttime 0ps -endtime 2000ps sim:/circ_comp/SW
+# Editable Wave items are not compatible with the wave window's standard undo-redo.  Standard undo-redo has been disabled.
+# circ_comp
+wave create -driver freeze -pattern counter -startvalue 00000000000 -endvalue 11111111111 -type Range -direction Up -period 10ps -step 1 -repeat 2048 -range 10 0 -starttime 0ps -endtime 5000ps sim:/circ_comp/SW
+# Editable Wave items are not compatible with the wave window's standard undo-redo.  Standard undo-redo has been disabled.
+# circ_comp
+wave create -driver freeze -pattern counter -startvalue 00000000000 -endvalue 11111111111 -type Range -direction Up -period 10ps -step 1 -repeat 2048 -range 10 0 -starttime 0ps -endtime 8000ps sim:/circ_comp/SW
+# Editable Wave items are not compatible with the wave window's standard undo-redo.  Standard undo-redo has been disabled.
+# circ_comp
+wave create -driver freeze -pattern counter -startvalue 00000000000 -endvalue 11111111111 -type Range -direction Up -period 10ps -step 1 -repeat 2048 -range 10 0 -starttime 0ps -endtime 10000ps sim:/circ_comp/SW
+# Editable Wave items are not compatible with the wave window's standard undo-redo.  Standard undo-redo has been disabled.
+# circ_comp
+wave create -driver freeze -pattern counter -startvalue 00000000000 -endvalue 11111111111 -type Range -direction Up -period 10ps -step 1 -repeat 2048 -range 10 0 -starttime 0ps -endtime 15000ps sim:/circ_comp/SW
+# Editable Wave items are not compatible with the wave window's standard undo-redo.  Standard undo-redo has been disabled.
+# circ_comp
+wave create -driver freeze -pattern counter -startvalue 00000000000 -endvalue 11111111111 -type Range -direction Up -period 10ps -step 1 -repeat 2048 -range 10 0 -starttime 0ps -endtime 20000ps sim:/circ_comp/SW
+# Editable Wave items are not compatible with the wave window's standard undo-redo.  Standard undo-redo has been disabled.
+# circ_comp
+wave create -driver freeze -pattern counter -startvalue 00000000000 -endvalue 11111111111 -type Range -direction Up -period 10ps -step 1 -repeat 2048 -range 10 0 -starttime 0ps -endtime 30000ps sim:/circ_comp/SW
+# Editable Wave items are not compatible with the wave window's standard undo-redo.  Standard undo-redo has been disabled.
+# circ_comp
+wave create -driver freeze -pattern counter -startvalue 00000000000 -endvalue 11111111111 -type Range -direction Up -period 10ps -step 1 -repeat 2048 -range 10 0 -starttime 0ps -endtime 50000ps sim:/circ_comp/SW
+# Editable Wave items are not compatible with the wave window's standard undo-redo.  Standard undo-redo has been disabled.
+# circ_comp
+wave create -driver freeze -pattern counter -startvalue 00000000000 -endvalue 11111111111 -type Range -direction Up -period 10ps -step 1 -repeat 2048 -range 10 0 -starttime 0ps -endtime 100000ps sim:/circ_comp/SW
+# Editable Wave items are not compatible with the wave window's standard undo-redo.  Standard undo-redo has been disabled.
+# circ_comp
+add wave -position end  sim:/circ_comp/HEX7
+add wave -position end  sim:/circ_comp/HEX6
+add wave -position end  sim:/circ_comp/HEX5
+add wave -position end  sim:/circ_comp/HEX4
+add wave -position end  sim:/circ_comp/HEX3
+add wave -position end  sim:/circ_comp/HEX2
+add wave -position end  sim:/circ_comp/HEX0
+add wave -position end  sim:/circ_comp/LEDR
+run
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf C:/QP/Circ_Comp/simulation/wave.do
+wave editwrite -file C:/QP/Circ_Comp/simulation/wave.do -append
+# End time: 22:06:01 on May 18,2026, Elapsed time: 0:48:08
+# Errors: 0, Warnings: 0
