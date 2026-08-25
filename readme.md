@@ -46,4 +46,4 @@ O projeto é estruturado de forma modular:
     *   **Zero:** Placeholder para detecção de resultado nulo (0000).
 
 ---
-*Projeto desenvolvido como parte dos estudos de sistemas digitais e arquitetura de computadores.*
+*Projeto desenvolvido como parte dos estudos de sistemas digitais e arquitetura de computadores por Enzo Marchi Romera e Gabriel de Oliveira Baptista.*
